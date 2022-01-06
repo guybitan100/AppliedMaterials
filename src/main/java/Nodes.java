@@ -10,7 +10,6 @@ public class Nodes {
         }
     }
 
-
     public void buildJobs() {
         Node nodeA = new Node("A");
         Node nodeB = new Node("B");
@@ -20,9 +19,9 @@ public class Nodes {
         Node nodeF = new Node("F");
         Node nodeG = new Node("G");
 
-        nodeA.addDependence(nodeA,nodeB, nodeC);
-        nodeB.addDependence(nodeC);
-        nodeC.addDependence(nodeD);
+        nodeA.addDependence(nodeB, nodeC);
+        nodeB.addDependence(nodeC, nodeA);
+        nodeC.addDependence(nodeD, nodeB);
         nodeF.addDependence(nodeE, nodeG);
         addNodes(nodeA, nodeB, nodeC, nodeD, nodeE, nodeF, nodeG);
 
