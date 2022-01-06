@@ -16,27 +16,18 @@ public abstract class NodeBase {
         }
     }
 
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void build() {
-
-    }
 
     public void printDependencies() {
         StringBuilder sb = new StringBuilder();
+        sb.append("Node:" + name + " dependent on Nodes: ");
 
-        sb.append("Job: " + name + " dependent on: ");
-
-        for (Node node : dependencies.values()) {
-            sb.append("Job:" + node.name + ", ");
+        for (Node dependentNode : dependencies.values()) {
+            sb.append(dependentNode.name + " ");
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }

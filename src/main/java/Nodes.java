@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Jobs {
+public class Nodes {
 
     ArrayList<Node> nodes = new ArrayList<>();
 
