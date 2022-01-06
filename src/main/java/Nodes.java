@@ -20,7 +20,7 @@ public class Nodes {
         Node nodeF = new Node("F");
         Node nodeG = new Node("G");
 
-        nodeA.addDependence(nodeB, nodeC);
+        nodeA.addDependence(nodeA,nodeB, nodeC);
         nodeB.addDependence(nodeC);
         nodeC.addDependence(nodeD);
         nodeF.addDependence(nodeE, nodeG);

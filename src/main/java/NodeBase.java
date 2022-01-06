@@ -12,7 +12,13 @@ public abstract class NodeBase {
 
     public void addDependence(Node... nodes) {
         for (Node node : nodes) {
-            dependencies.put(node.getName(), node);
+            if (node.getName() != name) {
+                dependencies.put(node.getName(), node);
+            }
+            else
+            {
+                System.out.println("Node:" + node.getName() + " Cant depend on itself");
+            }
         }
     }
 
@@ -24,7 +30,6 @@ public abstract class NodeBase {
     public void printDependencies() {
         StringBuilder sb = new StringBuilder();
         sb.append("Node:" + name + " dependent on Nodes: ");
-
         for (Node dependentNode : dependencies.values()) {
             sb.append(dependentNode.name + " ");
         }
