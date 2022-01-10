@@ -35,7 +35,7 @@ public abstract class JobBase {
 
     public void printNodeBuild() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Node:" + name + " build Nodes: ");
+        sb.append("Job:" + name + " build Jobs: ");
         for (Job dependentNode : buildList.values()) {
             sb.append(dependentNode.getName() + " ");
         }
