@@ -1,10 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        Nodes nodes = new Nodes();
+        Jobs nodes = new Jobs();
         nodes.buildJobs();
-        for (Node node : nodes.getNodes()) {
-            node.printDependencies();
+        for (Job node : nodes.getNodes()) {
+            node.printNodeBuild();
         }
     }
 }
